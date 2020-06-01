@@ -1,0 +1,21 @@
+<hr/>
+<p>
+  My name {{name}}
+</p>
+
+
+<!-- <p>Button is enable = {{allowNewServer}}</p> -->
+
+
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<br/>
+
+<button class="btn btn-primary" [disabled]="serverName ===''" (click)="onCreateServer()">Add Server</button>
+<br/>
+<br/>
+<p *ngIf="serverCreated">{{ serverCreationStatus}}</p>
+<p *ngIf="serverCreated">Server is {{ serverStatus}}</p>
+
+<p *ngFor="let server of servers">{{server}}</p>
+
+<!-- <app-content-server *ngFor="let server of servers"></app-content-server> -->
